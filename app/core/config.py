@@ -10,5 +10,9 @@ class Settings:
     app_name: str = os.getenv("APP_NAME", "AI API")
     app_env: str = os.getenv("APP_ENV", "local")
     debug: bool = os.getenv("DEBUG", "true").lower() == "true"
+    database_url: str = os.getenv(
+        "DATABASE_URL",
+        "postgresql://postgres:postgres@localhost:5432/ai_doc"
+    )
 
 settings = Settings()
