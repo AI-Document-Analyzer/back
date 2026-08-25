@@ -12,7 +12,7 @@ class Settings:
     debug: bool = os.getenv("DEBUG", "true").lower() == "true"
     database_url: str = os.getenv(
         "DATABASE_URL",
-        "postgresql://postgres:postgres@localhost:5432/ai_doc"
+        "postgresql://postgres:postgres@127.0.0.1:15433/ai_doc_analyzer"
     )
 
 settings = Settings()
